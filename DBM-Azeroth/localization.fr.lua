@@ -42,7 +42,7 @@ L:SetGeneralLocalization{
 }
 
 L:SetMiscLocalization({
-	Pull		= "The strands of LIFE have been severed! The Dreamers must be avenged!"
+	Pull		= "Les fils de la VIE ont été coupés ! Les Rêveurs doivent être vengés !"
 })
 
 -- Lethon (Hinterlands)
