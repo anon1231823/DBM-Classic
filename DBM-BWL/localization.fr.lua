@@ -85,7 +85,7 @@ L:SetGeneralLocalization{
 	name = "Gardes Griffemort"
 }
 L:SetWarningLocalization{
-	WarnVulnerable		= "Vulnérabilité: %s"
+	WarnVulnerable		= "Vulnérabilité : %s"
 }
 L:SetOptionLocalization{
 	WarnVulnerable		= "Afficher un avertissement pour les vulnérabilités des sorts"
@@ -110,7 +110,7 @@ L:SetGeneralLocalization{
 }
 L:SetWarningLocalization{
 	WarnBreath		= "%s",
-	WarnVulnerable	= "Vulnérabilité: %s"
+	WarnVulnerable	= "Vulnérabilité : %s"
 }
 L:SetTimerLocalization{
 	TimerBreathCD	= "%s recharge",
