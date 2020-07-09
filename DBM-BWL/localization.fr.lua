@@ -145,8 +145,9 @@ L:SetGeneralLocalization{
 	name = "Nefarian"
 }
 L:SetWarningLocalization{
-	WarnAddsLeft		= "%d éliminations restantes",
-	WarnClassCall		= "%s appel"
+	WarnAddsLeft		= "%d restants",
+	WarnClassCall		= "L'appel de %s"
+	specwarnClassCall	= "Votre appel de classe !"
 }
 L:SetTimerLocalization{
 	TimerClassCall		= "L'appel de %s termine"
@@ -155,6 +156,7 @@ L:SetOptionLocalization{
 	TimerClassCall		= "Afficher le timer pour la durée de l'appel en classe",
 	WarnAddsLeft		= "Annoncer les éliminations restantes jusqu'au déclenchement de la phase 2",
 	WarnClassCall		= "Annoncer les appels de classe"
+	specwarnClassCall	= "Afficher un avertissement spécial lorsque vous êtes affecté par un appel de classe"
 }
 L:SetMiscLocalization{
     YellP1			= "Que les jeux commencent !",
