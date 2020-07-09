@@ -155,7 +155,7 @@ L:SetTimerLocalization{
 L:SetOptionLocalization{
 	TimerClassCall		= "Afficher le timer pour la durée de l'appel en classe",
 	WarnAddsLeft		= "Annoncer les éliminations restantes jusqu'au déclenchement de la phase 2",
-	WarnClassCall		= "Annoncer les appels de classe"
+	WarnClassCall		= "Annoncer les appels de classe",
 	specwarnClassCall	= "Afficher un avertissement spécial lorsque vous êtes affecté par un appel de classe"
 }
 L:SetMiscLocalization{
