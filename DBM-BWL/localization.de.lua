@@ -117,7 +117,7 @@ L:SetTimerLocalization{
 L:SetOptionLocalization{
 	WarnBreath = "Zeige Warnung, wenn Chromaggus einen seiner Atem wirkt",
 	WarnVulnerable = "Zeige Warnung für Zauberanfälligkeiten",
-	TimerBreathCD = "Abklingzeit des Atem anzeigen"
+	TimerBreathCD = "Abklingzeit des Atem anzeigen",
 	TimerBreath = "Zeige Atem Zauber",
 	TimerVulnCD = "Zeige Abklingzeit der Anfälligkeit"
 } 
@@ -140,7 +140,7 @@ L:SetMiscLocalization{
 L = DBM:GetModLocalization("Nefarian-Classic")
  
 L:SetGeneralLocalization{
-name = "Nefarian"
+	name = "Nefarian"
 }
 L:SetWarningLocalization{
 	WarnAddsLeft = "%d ausstehende Tötungen",
