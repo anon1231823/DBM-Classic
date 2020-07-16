@@ -17,9 +17,9 @@ L:SetOptionLocalization{
 }
 L:SetMiscLocalization{
 	Phase2Emote	= "flieht während die kontrollierenden Kräfte der Kugel schwinden.",
-  	YellEgg1 = "Ihr werdet dafür bezahlen, dass Ihr mich zu soetwas gezwungen habt!",
-  	YellEgg2 = "Narren! Diese Eier sind weit wertvoller als Ihr glaubt!",
-  	YellEgg3 = "Nein - nicht noch einer! Für diese Gräueltat werdet Ihr mit Euren Köpfen bezahlen!",
+	YellEgg1 = "Ihr werdet dafür bezahlen, dass Ihr mich zu soetwas gezwungen habt!",
+	YellEgg2 = "Narren! Diese Eier sind weit wertvoller als Ihr glaubt!",
+	YellEgg3 = "Nein - nicht noch einer! Für diese Gräueltat werdet Ihr mit Euren Köpfen bezahlen!",
 	YellPull 	= "Eindringlinge sind in die Brutstätte vorgestoßen! Schlagt Alarm! Beschützt die Eier um jeden Preis!"
 }
 -------------------
@@ -79,7 +79,7 @@ L:SetGeneralLocalization{
 -----------------------
 -- Chromaggus, Death Talon Overseer and Death Talon Wyrmguard
 L = DBM:GetModLocalization("TalonGuards")
- 
+
 L:SetGeneralLocalization{
 	name = "Todeskrallenwache"
 }
@@ -101,7 +101,7 @@ L:SetMiscLocalization{
 --  Chromaggus  --
 ------------------
 L = DBM:GetModLocalization("Chromaggus")
- 
+
 L:SetGeneralLocalization{
 	name = "Chromaggus"
 }
@@ -111,8 +111,8 @@ L:SetWarningLocalization{
 }
 L:SetTimerLocalization{
 	TimerBreathCD = "Abklingzeit der %s",
-	TimerBreath = "%s Zauber", 
-	TimerVulnCD = "Abklingzeit der Anfälligkeit" 
+	TimerBreath = "%s Zauber",
+	TimerVulnCD = "Abklingzeit der Anfälligkeit"
 }
 L:SetOptionLocalization{
 	WarnBreath = "Zeige Warnung, wenn Chromaggus einen seiner Atem wirkt",
@@ -120,12 +120,12 @@ L:SetOptionLocalization{
 	TimerBreathCD = "Abklingzeit des Atem anzeigen",
 	TimerBreath = "Zeige Atem Zauber",
 	TimerVulnCD = "Zeige Abklingzeit der Anfälligkeit"
-} 
+}
 L:SetMiscLocalization{
 	Breath1 = "Erster Atem",
 	Breath2 = "Zweiter Atem",
 	VulnEmote = "%s weicht zurück, als die Haut schimmert.",
-	Vuln = "Anfälligkeit",  
+	Vuln = "Anfälligkeit",
 	Fire = "Feuer",
 	Nature = "Natur",
 	Frost = "Frost",
@@ -133,12 +133,12 @@ L:SetMiscLocalization{
 	Arcane = "Arkan",
 	Holy = "Heilig"
 }
- 
+
 ----------------
 --  Nefarian  --
 ----------------
 L = DBM:GetModLocalization("Nefarian-Classic")
- 
+
 L:SetGeneralLocalization{
 	name = "Nefarian"
 }
