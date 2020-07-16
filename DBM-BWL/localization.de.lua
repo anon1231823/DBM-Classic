@@ -81,21 +81,21 @@ L:SetGeneralLocalization{
 L = DBM:GetModLocalization("TalonGuards")
  
 L:SetGeneralLocalization{
-name = "Todeskrallenwache"
+	name = "Todeskrallenwache"
 }
 L:SetWarningLocalization{
-WarnVulnerable = "%sanfälligkeit"
+	WarnVulnerable = "%sanfälligkeit"
 }
 L:SetOptionLocalization{
-WarnVulnerable = "Zeige Warnung für Zauberanfälligkeiten"
+	WarnVulnerable = "Zeige Warnung für Zauberanfälligkeiten"
 }
 L:SetMiscLocalization{
-Fire = "Feuer",
-Nature = "Natur",
-Frost = "Frost",
-Shadow = "Schatten",
-Arcane = "Arkan",
-Holy = "Heilig"
+	Fire = "Feuer",
+	Nature = "Natur",
+	Frost = "Frost",
+	Shadow = "Schatten",
+	Arcane = "Arkan",
+	Holy = "Heilig"
 }
 ------------------
 --  Chromaggus  --
@@ -103,35 +103,35 @@ Holy = "Heilig"
 L = DBM:GetModLocalization("Chromaggus")
  
 L:SetGeneralLocalization{
-name = "Chromaggus"
+	name = "Chromaggus"
 }
 L:SetWarningLocalization{
-WarnBreath = "%s"
-WarnVulnerable = "%sanfälligkeit"
+	WarnBreath = "%s",
+	WarnVulnerable = "%sanfälligkeit"
 }
 L:SetTimerLocalization{
-TimerBreathCD = "Abklingzeit der %s"
-TimerBreath = "%s Zauber", 
-TimerVulnCD = "Abklingzeit der Anfälligkeit" 
+	TimerBreathCD = "Abklingzeit der %s",
+	TimerBreath = "%s Zauber", 
+	TimerVulnCD = "Abklingzeit der Anfälligkeit" 
 }
 L:SetOptionLocalization{
-WarnBreath = "Zeige Warnung, wenn Chromaggus einen seiner Atem wirkt",
-WarnVulnerable = "Zeige Warnung für Zauberanfälligkeiten",
-TimerBreathCD = "Abklingzeit des Atem anzeigen"
-TimerBreath = "Zeige Atem Zauber",
-TimerVulnCD = "Zeige Abklingzeit der Anfälligkeit"
+	WarnBreath = "Zeige Warnung, wenn Chromaggus einen seiner Atem wirkt",
+	WarnVulnerable = "Zeige Warnung für Zauberanfälligkeiten",
+	TimerBreathCD = "Abklingzeit des Atem anzeigen"
+	TimerBreath = "Zeige Atem Zauber",
+	TimerVulnCD = "Zeige Abklingzeit der Anfälligkeit"
 } 
 L:SetMiscLocalization{
-Breath1 = "Erster Atem",
-Breath2 = "Zweiter Atem"
-VulnEmote = "%s weicht zurück, als die Haut schimmert.",
-Vuln = "Anfälligkeit",  
-Fire = "Feuer",
-Nature = "Natur",
-Frost = "Frost",
-Shadow = "Schatten",
-Arcane = "Arkan",
-Holy = "Heilig"
+	Breath1 = "Erster Atem",
+	Breath2 = "Zweiter Atem",
+	VulnEmote = "%s weicht zurück, als die Haut schimmert.",
+	Vuln = "Anfälligkeit",  
+	Fire = "Feuer",
+	Nature = "Natur",
+	Frost = "Frost",
+	Shadow = "Schatten",
+	Arcane = "Arkan",
+	Holy = "Heilig"
 }
  
 ----------------
@@ -143,18 +143,18 @@ L:SetGeneralLocalization{
 name = "Nefarian"
 }
 L:SetWarningLocalization{
-WarnAddsLeft = "%d ausstehende Tötungen",
-WarnClassCall = "%s Ruf"
-specwarnClassCall = "Klassenruf auf Dir!"
+	WarnAddsLeft = "%d ausstehende Tötungen",
+	WarnClassCall = "%s Ruf",
+	specwarnClassCall = "Klassenruf auf Dir!"
 }
 L:SetTimerLocalization{
-TimerClassCall = "%s Ruf endet"
+	TimerClassCall = "%s Ruf endet"
 }
 L:SetOptionLocalization{
-TimerClassCall = "Dauer der Klassenrufe anzeigen",
-WarnAddsLeft = "Kündige verbleibend Tötungen an bis 2 Phase ausgelöst ist.",
-WarnClassCall = "Verkünde Klassenrufe"
-specwarnClassCall = "Zeige besondere Warnung wenn Du von einem Klassenruf betroffen bist"
+	TimerClassCall = "Dauer der Klassenrufe anzeigen",
+	WarnAddsLeft = "Kündige verbleibend Tötungen an bis 2 Phase ausgelöst ist.",
+	WarnClassCall = "Verkünde Klassenrufe",
+	specwarnClassCall = "Zeige besondere Warnung wenn Du von einem Klassenruf betroffen bist"
 }
 L:SetMiscLocalization{
 	YellP1		= "Let the games begin!",
