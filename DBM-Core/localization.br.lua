@@ -269,7 +269,7 @@ L.ERROR_NO_PERMISSION				= "Você não tem as permissões necessárias para faze
 L.ALLIANCE					= "Aliança"
 L.HORDE						= "Horda"
 
-L.NEXT						= "próximo %s"
+L.NEXT						= "Próximo %s"
 L.COOLDOWN					= "%s CD"
 L.UNKNOWN					= "desconhecido"
 L.LEFT						= "Esquerda"
