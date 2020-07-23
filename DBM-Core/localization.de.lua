@@ -568,4 +568,4 @@ L.WORLD_BUFFS.allianceNef	= "Angehörige der Allianz, der Herrscher des Blackroc
 L.WORLD_BUFFS.zgHeart		= "Nun ist nur noch ein letzter Schritt nötig, um uns von der Bedrohung des Seelenschinders zu befreien"
 L.WORLD_BUFFS.zgHeartBooty	= "Der Blutgott, der Seelenschinder, wurde besiegt! Wir werden nicht länger unterdrückt!"
 L.WORLD_BUFFS.zgHeartYojamba= "Beginnt mit dem Ritual, meine Diener. Wir müssen das Herz von Hakkar wieder in das Nichts verbannen!"
-L.WORLD_BUFFS.rendHead		= "¡El falso Jefe de Guerra Rend Puño Negro ha caído!" --needs translation
+L.WORLD_BUFFS.rendHead		= "Rend Blackhand, der falsche Kriegshäuptling, ist gefallen!"
