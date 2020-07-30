@@ -125,7 +125,7 @@ L:SetMiscLocalization{
 	Breath1 = "Erster Atem",
 	Breath2 = "Zweiter Atem",
 	VulnEmote = "%s weicht zurück, als die Haut schimmert.",
-	Vuln = "Anfälligkeit",
+	Vuln = "Verwundbarkeit",
 	Fire = "Feuer",
 	Nature = "Natur",
 	Frost = "Frost",
