@@ -6,7 +6,10 @@ local L = DBM_GUI_L
 
 L.MainFrame = "Deadly Boss Mods"
 
+L.TranslationByPrefix		= "Traduzido por "
 L.TranslationBy 			= "GlitterStorm @ Azralon"
+L.Website					= "Visita nosso canal Discord: |cFF73C2FBhttps://discord.gg/deadlybossmods|r."
+L.WebsiteButton				= "Pagina web"
 
 L.OTabBosses	= "Chefes"
 L.OTabRaids		= "Raide"--Raids & PVP
