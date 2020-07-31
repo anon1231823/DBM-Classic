@@ -4,12 +4,28 @@ local L = DBM_GUI_L
 
 L.MainFrame = "Deadly Boss Mods"
 
+L.TranslationByPrefix		= "Traduit par "
 L.TranslationBy 			= "Psyco/Sasmira/Pettigrow/Edoz@EU-Ysondre/Leybola@EU-Sargeras/Noleen@EU-Hyjal"
+L.Website					= "Rendez-nous visite sur Discord à |cFF73C2FBhttps://discord.gg/deadlybossmods|r."
+L.WebsiteButton				= "Site Web"
 
 L.OTabBosses	= "Boss"
+L.OTabRaids		= "Raid"--Raids & PVP
+L.OTabDungeons	= "Groupe/Solo"--1-5 person content (Dungeons, MoP Scenarios, World Events, Brawlers, Proving Grounds, Visions, Torghast, etc)
+L.OTabPlugins	= "Core Plugins"
 L.OTabOptions	= "Options"
+L.OTabAbout		= "À propos"
+
 
 L.TabCategory_Options		= "Options générales"
+L.TabCategory_BFA	 		= "Battle for Azeroth"
+L.TabCategory_LEG	 		= "Legion"
+L.TabCategory_WOD	 		= "Warlords of Draenor"
+L.TabCategory_MOP	 		= "Mists of Pandaria"
+L.TabCategory_CATA	 		= "Cataclysm"
+L.TabCategory_WOTLK 		= "Wrath of the Lich King"
+L.TabCategory_BC 			= "Burning Crusade"
+L.TabCategory_CLASSIC		= "Classique"
 L.TabCategory_OTHER			= "Autres modules"
 
 L.BossModLoaded 			= "Statistiques |2 %s"
@@ -41,6 +57,7 @@ L.Statistic_Kills			= "Victoires:"
 L.Statistic_Wipes			= "Échecs:"
 L.Statistic_Incompletes		= "Non terminés:"--For scenarios, TODO, figure out a clean way to replace any Statistic_Wipes with Statistic_Incompletes for scenario mods
 L.Statistic_BestKill		= "Meilleur temps:"
+L.Statistic_BestRank		= "Meilleur Grade:"--Maybe not get used, not sure yet, localize anyways
 
 -- Tab: General Core Options
 L.General 					= "Options générales de DBM"
@@ -51,16 +68,21 @@ L.UseDialogChannel			= "Canal audio des dialogues"
 L.UseSFXChannel				= "Canal audio des effets sonores (SFX)"
 L.Latency_Text				= "Seuil de latence max. pour synchro: %d"
 
+L.Button_RangeFrame			= "Afficher/cacher la fenêtre de portée"
+L.Button_InfoFrame			= "Afficher/cacher la fenêtre des infos"
+L.Button_TestBars			= "Lancer les barres de test"
+L.Button_ResetInfoRange		= "Réinit. les fenêtres de portée et d'infos"
+
 L.ModelOptions				= "Options du visualiseur de modèle 3D"
 L.EnableModels				= "Activer les modèles 3D dans les options des boss"
 L.ModelSoundOptions			= "Configurer le son pour le visualiseur 3D"
 L.ModelSoundShort			= SHORT
 L.ModelSoundLong			= TOAST_DURATION_LONG
 
-L.Button_RangeFrame			= "Afficher/cacher la fenêtre de portée"
-L.Button_InfoFrame			= "Afficher/cacher la fenêtre des infos"
-L.Button_TestBars			= "Lancer les barres de test"
-L.Button_ResetInfoRange		= "Réinit. les fenêtres de portée et d'infos"
+L.ResizeOptions			 	= "Options de redimensionnement"
+L.Button_ResetWindowSize	= "Réinitialiser la taille de la fenêtre GUI"
+L.Editbox_WindowWidth		= "Largeur de la fenêtre GUI"
+L.Editbox_WindowHeight		= "Hauteur de la fenêtre GUI"
 
 -- Tab: Raidwarning
 L.Tab_RaidWarning 			= "Alertes raid"
@@ -84,26 +106,56 @@ L.Warn_FontShadow			= "Ombre"
 L.Warn_FontSize				= "Taille de la police: %d"
 L.Warn_Duration				= "Durée de l'alerte: %0.1f sec"
 L.None						= "Aucun"
+L.Random					= "Aléatoire"
 L.Outline					= "Simple"
 L.ThickOutline				= "Epais"
 L.MonochromeOutline			= "Monochrome simple"
 L.MonochromeThickOutline	= "Monochrome épais"
 L.RaidWarnSound				= "Jouer un son sur les alertes raid"
 
+-- Tab: Spec Warn Frame
+L.Panel_SpecWarnFrame		= "Alertes Raid spéciales"
+L.Area_SpecWarn				= "Options des alertes spéciales"
+L.SpecWarn_ClassColor		= "Utiliser des couleurs selon les classes pour les alertes spéciales"
+L.ShowSWarningsInChat 		= "Afficher les alertes spéciales dans la fenêtre de discussion"
+L.SWarnNameInNote			= "Utiliser les options SW5 si une note personnalisée contient votre nom"
+L.SpecialWarningIcon		= "Afficher les icônes sur les annonces spéciales"
+L.ShortTextSpellname		= "Utiliser un texte de nom de sort plus court (si disponible)"
+L.SpecWarn_FlashFrameRepeat	= "Répéter %d fois (si activé)"
+L.SpecWarn_Font				= "Police de texte des alertes spéciales"
+L.SpecWarn_FontSize			= "Taille de la police: %d"
+L.SpecWarn_FontColor		= "Couleur du texte"
+L.SpecWarn_FontType			= "Choisissez la police"
+L.SpecWarn_FlashRepeat		= "Répéter Flash"
+L.SpecWarn_FlashColor		= "Couleur du flash"
+L.SpecWarn_FlashDur			= "Durée du flash: %0.1f"
+L.SpecWarn_FlashAlpha		= "Taux alpha du flash: %0.1f"
+L.SpecWarn_DemoButton		= "Aff. un exemple"
+L.SpecWarn_MoveMe			= "Définir la position"
+L.SpecWarn_ResetMe			= "Réinit. les valeurs"
+L.SpecialWarnSoundOption	= "Définir le son par défaut"
+L.SpecialWarnHeader1		= "Type 1 : Définir les options pour les annonces de priorité normale vous affectant ou affectant vos actions"
+L.SpecialWarnHeader2		= "Type 2 : Définir les options pour les annonces à priorité normale affectant tout le monde"
+L.SpecialWarnHeader3		= "Type 3 : Définir les options pour les annonces à haute priorité"
+L.SpecialWarnHeader4		= "Type 4 : Définir les options pour les annonces spéciales de fuite à haute priorité"
+L.SpecialWarnHeader5		= "Type 5 : Définir les options pour les annonces avec des notes contenant votre nom"
+
 -- Tab: Generalwarnings
 L.Tab_GeneralMessages 		= "Messages généraux"
 L.CoreMessages				= "Options des messages de DBM"
-L.ShowLoadMessage 			= "Afficher les messages de chargement de module dans la fenêtre de chat"
 L.ShowPizzaMessage 			= "Afficher les messages d'annonce de chrono (broadcast timer messages) dans la fenêtre de chat"
-L.ShowCombatLogMessage 		= "Afficher les messages d'enregistrement de combat de DBM dans la fenêtre de chat"
-L.ShowTranscriptorMessage	= "Afficher les messages d'enregistrement de DBM Transcriptor dans la fenêtre de chat"
 L.ShowAllVersions	 		= "Afficher les versions des BossMods pour tous les membres du groupe dans la fenêtre de chat lors d'une vérification de version. (Continue d'afficher les messages périmée/courante même si désactivé)"
+L.ShowReminders				= "Afficher les messages de rappel pour les recommandations, les mods manquants ou les messages de correctif"
+
 L.CombatMessages			= "Options des messages liés au combat"
 L.ShowEngageMessage 		= "Afficher les messages d'engagement du boss dans la fenêtre de chat"
-L.ShowKillMessage 			= "Afficher les messages de victoire dans la fenêtre de chat"
-L.ShowWipeMessage 			= "Afficher les messages de défaite dans la fenêtre de chat"
+L.ShowDefeatMessage 		= "Afficher les messages de défaite dans la fenêtre de chat"
 L.ShowGuildMessages 		= "Afficher les messages engagement/victoire/défaite en guilde dans la fenêtre de chat"
-L.ShowRecoveryMessage 		= "Afficher les messages de récupération des timers dans la fenêtre de chat"
+
+L.Area_ChatAlerts			= "Options des alertes dans le chat"
+L.WorldBossAlert			= "Afficher une alerte lorsqu'un Boss du Monde a probablement été engagé sur votre royaume par votre guilde ou des amis (érronée si info reçue de CRZed)"
+L.WorldBuffAlert			= "Afficher le message d'alerte et le timer lorsque le World Buff RP a été démarré sur votre royaume"
+-- start back here
 L.Area_WhisperMessages		= "Options des chuchotements"
 L.AutoRespond 				= "Répondre automatiquement aux chuchotements pendant les combats"
 L.WhisperStats 				= "Inclure les victoires/défaites dans les réponses"
@@ -155,25 +207,6 @@ L.BarSpark					= "Eclaircissement de front"
 L.BarFlash					= "Clignotement vers la fin"
 L.BarSort					= "Arranger en fonction du temps restant"
 L.BarColorByType			= "Couleur par type"
-
--- Tab: Spec Warn Frame
-L.Panel_SpecWarnFrame		= "Alertes Raid spéciales"
-L.Area_SpecWarn				= "Options des alertes spéciales"
-L.SpecWarn_ClassColor		= "Utiliser des couleurs selon les classes pour les alertes spéciales"
-L.ShowSWarningsInChat 		= "Afficher les alertes spéciales dans la fenêtre de discussion"
-L.SWarnNameInNote			= "Utiliser les options SW5 si une note personnalisée contient votre nom"
-L.SpecWarn_FlashFrameRepeat	= "Répéter %d fois (si activé)" --was missing
-L.SpecWarn_Font				= "Police de texte des alertes spéciales"
-L.SpecWarn_FontSize			= "Taille de la police: %d"
-L.SpecWarn_FontColor		= "Couleur du texte"
-L.SpecWarn_FontType			= "Choisissez la police"
-L.SpecWarn_FlashRepeat		= "Répéter Flash" --was missing
-L.SpecWarn_FlashColor		= "Couleur du flash"
-L.SpecWarn_FlashDur			= "Durée du flash: %0.1f"
-L.SpecWarn_FlashAlpha		= "Taux alpha du flash: %0.1f"
-L.SpecWarn_DemoButton		= "Aff. un exemple"
-L.SpecWarn_MoveMe			= "Définir la position"
-L.SpecWarn_ResetMe			= "Réinit. les valeurs"
 
 -- Tab: Spoken Alerts Frame
 L.Panel_SpokenAlerts		= "Alertes Vocales"
@@ -242,9 +275,9 @@ L.Always					= "Toujours"
 
 L.Panel_ExtraFeatures		= "Fonctionnalités supplémentaires"
 --
-L.Area_ChatAlerts			= "Options des alertes dans le chat"
+
 L.CheckGear					= "Affiche un message d'alerte pendant les pull quand votre ilvl équipé est beaucoup plus bas que votre ilvl global (40+)"
-L.WorldBossAlert			= "Afficher une alerte lorsqu'un World Boss a probablement été engagé sur votre royaume par votre guilde ou des amis (érronée si info reçue de CRZed)"
+
 --
 L.Area_SoundAlerts			= "Options des alertes sonores"
 L.LFDEnhance				= "Jouer le son du readycheck sur les vérif. de rôle &amp; sur les propositions de BG/RdG dans le canal audio principal (généralement plus fort, fonctionne même si le SFX est désactivé)"
