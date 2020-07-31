@@ -59,12 +59,12 @@ L:SetOptionLocalization{
 	WarnShatter	= "Annoncer l'état de Briser"
 }
 L:SetMiscLocalization{
-	Slow	= "commence à ralentir",
-	Freezing= "est gelé",
-	Frozen	= "est congelé",
-	Phase4 	= "commence à se briser",
-	Phase5 	= "semble prêt à se briser",
-	Phase6 	= "explose"
+	Slow	= "commence à ralentir !",
+	Freezing= "est gelé !",
+	Frozen	= "est congelé !",
+	Phase4 	= "commence à se briser !",
+	Phase5 	= "semble prêt à se briser !",
+	Phase6 	= "explose !"
 }
 -------------
 -- Huhuran --
