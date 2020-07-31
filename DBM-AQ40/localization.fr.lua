@@ -51,8 +51,8 @@ L:SetGeneralLocalization{
 	name = "Viscidus"
 }
 L:SetWarningLocalization{
-	WarnFreeze	= "Gel: %d/3",
-	WarnShatter	= "Briser: %d/3"
+	WarnFreeze	= "Gel : %d/3",
+	WarnShatter	= "Briser : %d/3"
 }
 L:SetOptionLocalization{
 	WarnFreeze	= "Annoncer l'état de Gel",
