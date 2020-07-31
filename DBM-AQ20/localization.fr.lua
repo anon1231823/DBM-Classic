@@ -24,8 +24,8 @@ L:SetOptionLocalization{
 	WarnWave	= "Afficher l'annonce pour la prochaine vague entrante"
 }
 L:SetMiscLocalization{
-	Wave12		= "They come now. Try not to get yourself killed, young blood.",
-	Wave12Alt	= "Remember, Rajaxx, when I said I'd kill you last?",
+	Wave12		= "Ils arrivent. Essayez de ne pas vous faire tuer, bleusaille.",
+	Wave12Alt	= "Alors, Rajaxx, tu te souviens que j’avais dit que je te tuerais le dernier ?",
 	Wave3		= "L’heure de notre vengeance sonne enfin ! Que les ténèbres règnent dans le cœur de nos ennemis !",
 	Wave4		= "C’en est fini d’attendre derrière des portes fermées et des murs de pierre ! Nous ne serons pas privés de notre vengeance ! Les dragons eux-mêmes trembleront devant notre courroux !",
 	Wave5		= "La peur est pour l’ennemi ! La peur et la mort !",
