@@ -64,7 +64,7 @@ L:SetMiscLocalization{
 	Frozen	= "ist tiefgefroren!",
 	Phase4 	= "geht die Puste aus!",
 	Phase5 	= "ist kurz davor, zu zerspringen!",
-	Phase6 	= "explodiert!" --translate (trigger)
+	Phase6 	= "explodiert!"
 }
 -------------
 -- Huhuran --
