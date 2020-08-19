@@ -105,6 +105,9 @@ L:SetWarningLocalization{
 }
 L:SetTimerLocalization{
 	TimerEyeTentacle		= "Siguiente Tentáculo ocular",
+	TimerClawTentacle		= "Siguiente Tentáculo Garral",
+	TimerGiantEyeTentacle	= "Siguiente Tentáculo ocular gigante",
+	TimerGiantClawTentacle	= "Siguiente Tentáculo garral gigante",
 	TimerWeakened			= "Debilidad termina"
 }
 L:SetOptionLocalization{
