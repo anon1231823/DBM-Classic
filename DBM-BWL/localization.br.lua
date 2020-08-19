@@ -146,7 +146,7 @@ L:SetGeneralLocalization{
 L:SetWarningLocalization{
 	WarnAddsLeft		= "%d restante",
 	WarnClassCall		= "Chamada de %s",
-	specwarnClassCall	= "Sua chamada de classe!"
+	specwarnClassCall	= "Chamada da sua classe!"
 }
 L:SetTimerLocalization{
 	TimerClassCall		= "Chamada de %s acaba"
