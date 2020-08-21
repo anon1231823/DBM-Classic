@@ -284,7 +284,7 @@ L:SetGeneralLocalization{
 	name 		= "Piroguarda Mirabrasa"
 }
 L:SetMiscLocalization{
-	Pull		= "%s começa a recuperar a força!"    
+	Pull		= "%s começa a recuperar a força!"
 }
 -----------------------------
 --  Solakar Flamewreath  --
