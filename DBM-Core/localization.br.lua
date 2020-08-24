@@ -226,7 +226,7 @@ L.RANGERADAR_IN_RANGE_TEXTONE		= "%s (%0.1fy)"--One target
 
 L.INFOFRAME_SHOW_SELF				= "Sempre mostre seu poder"		-- Always show your own power value even if you are below the threshold
 L.INFOFRAME_SETLINES				= "Definir linhas máximas"
-L.INFOFRAME_SETCOLS					= "Definir colunas máximas" 
+L.INFOFRAME_SETCOLS					= "Definir colunas máximas"
 L.INFOFRAME_LINESDEFAULT			= "Definir por mod"
 L.INFOFRAME_LINES_TO				= "%d linhas"
 L.INFOFRAME_COLS_TO					= "%d colunas"
