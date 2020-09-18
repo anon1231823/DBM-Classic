@@ -65,7 +65,7 @@ L:SetMiscLocalization{
 	Phase4 	= "comienza a desmoronarse!",
 	Phase5 	= "parece a punto de hacerse añicos!",
 	Phase6 	= "explota!",
-	
+
 	HitsRemain	= "Golpes restantes",
 	Frost		= "Escarcha",
 	Physical	= "Daño físico"
