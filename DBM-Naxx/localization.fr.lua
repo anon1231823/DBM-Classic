@@ -23,7 +23,7 @@ L:SetOptionLocalization({
 })
 
 L:SetMiscLocalization({
-	ArachnophobiaTimer	= "Arachnophobia"
+	ArachnophobiaTimer	= "Arachnophobia",
 	Pull1				= "Oui, courez ! Faites circuler le sang !",
 	Pull2				= "Rien qu'une petite bouchée…"
 })
