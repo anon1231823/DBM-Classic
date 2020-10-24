@@ -65,7 +65,7 @@ L:SetMiscLocalization{
 	Phase4 		= "начинает раскалываться!",
 	Phase5 		= "едва держится!",
 	Phase6 		= "взрывается!",
-	
+
 	HitsRemain	= "Hits Remaining",
 	Frost		= "Frost",
 	Physical	= "Physical"
