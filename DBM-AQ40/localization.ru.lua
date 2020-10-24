@@ -59,9 +59,12 @@ L:SetOptionLocalization{
 	WarnShatter	= "Announce Shatter status"
 }
 L:SetMiscLocalization{
-	Phase4 	= "Нечистотон начинает раскалываться!",
-	Phase5 	= "Нечистотон едва держится!",
-	Phase6 	= "Explodes."
+	Phase1 	= "замедляется!"
+	Phase2 	= "замораживается!"
+	Phase3 	= "застывает!"
+	Phase4 	= "начинает раскалываться!",
+	Phase5 	= "едва держится!",
+	Phase6 	= "взрывается!"
 }
 -------------
 -- Huhuran --
