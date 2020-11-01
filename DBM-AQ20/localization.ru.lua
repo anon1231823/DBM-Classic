@@ -100,5 +100,5 @@ L:SetOptionLocalization{
 L = DBM:GetModLocalization("AQ20Trash")
 
 L:SetGeneralLocalization{
-	name = "АКУ20: Треш"
+	name = "АК20: Треш"
 }
