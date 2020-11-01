@@ -55,7 +55,7 @@ L:SetGeneralLocalization{
 L:SetWarningLocalization{
 	WarnPursue		= "Преследует >%s<",
 	SpecWarnPursue	= "Преследует вас!",
-	WarnDismember	= "%s Преследует >%s< (%s)"
+	WarnDismember	= "%s на >%s< (%s)"
 }
 L:SetOptionLocalization{
 	WarnPursue		= "Называть преследуемые цели",
