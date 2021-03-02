@@ -747,6 +747,7 @@ do
 		if newBar then -- update an existing bar
 			newBar.lastUpdate = GetTime()
 			newBar.huge = huge or nil
+			newBar.paused = nil
 			newBar:SetTimer(timer) -- this can kill the timer and the timer methods don't like dead timers
 			if newBar.dead then return end
 			newBar:SetElapsed(0) -- same
@@ -877,6 +878,7 @@ end
 function DBT:CancelBar(id)
 	for bar in self:GetBarIterator() do
 		if id == bar.id then
+			bar.paused = nil
 			bar:Cancel()
 			return true
 		end
