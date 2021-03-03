@@ -494,7 +494,7 @@ local PlaySoundFile, PlaySound = PlaySoundFile, PlaySound
 local Ambiguate = Ambiguate
 local C_TimerNewTicker, C_TimerAfter = C_Timer.NewTicker, C_Timer.After
 
-local SendAddonMessage, SendAddonMessageLogged = C_ChatInfo.SendAddonMessage, C_ChatInfo.SendAddonMessageLogged
+local SendAddonMessage = C_ChatInfo.SendAddonMessage
 
 -- for Phanx' Class Colors
 local RAID_CLASS_COLORS = _G["CUSTOM_CLASS_COLORS"] or RAID_CLASS_COLORS-- for Phanx' Class Colors
@@ -612,12 +612,12 @@ end
 local function sendLoggedSync(prefix, msg)
 	msg = msg or ""
 	if IsInGroup(2) and IsInInstance() then--For BGs, LFR and LFG (we also check IsInInstance() so if you're in queue but fighting something outside like a world boss, it'll sync in "RAID" instead)
-		SendAddonMessageLogged("D4C", prefix .. "\t" .. msg, "INSTANCE_CHAT")
+		C_ChatInfo.SendAddonMessageLogged("D4C", prefix .. "\t" .. msg, "INSTANCE_CHAT")
 	else
 		if IsInRaid() then
-			SendAddonMessageLogged("D4C", prefix .. "\t" .. msg, "RAID")
+			C_ChatInfo.SendAddonMessageLogged("D4C", prefix .. "\t" .. msg, "RAID")
 		elseif IsInGroup(1) then
-			SendAddonMessageLogged("D4C", prefix .. "\t" .. msg, "PARTY")
+			C_ChatInfo.SendAddonMessageLogged("D4C", prefix .. "\t" .. msg, "PARTY")
 		else--for solo raid
 			handleSync("SOLO", playerName, prefix, strsplit("\t", msg))
 		end
@@ -2654,7 +2654,7 @@ do
 			if whisperTarget then
 				--no dbm function uses whisper for pizza timers
 				--this allows weak aura creators or other modders to use the pizza timer object unicast via whisper instead of spamming group sync channels
-				SendAddonMessageLogged("D4C", ("UW\t%s\t%s"):format(time, text), "WHISPER", whisperTarget)
+				C_ChatInfo.SendAddonMessageLogged("D4C", ("UW\t%s\t%s"):format(time, text), "WHISPER", whisperTarget)
 			else
 				sendLoggedSync("U", ("%s\t%s"):format(time, text))
 			end
