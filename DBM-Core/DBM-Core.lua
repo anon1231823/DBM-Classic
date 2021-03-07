@@ -442,15 +442,53 @@ local enableIcons = true -- set to false when a raid leader or a promoted player
 
 local bannedMods = { -- a list of "banned" (meaning they are replaced by another mod or discontinued). These mods will not be loaded by DBM (and they wont show up in the GUI)
 	"DBM-Battlegrounds", --replaced by DBM-PvP
-	"DBM-ZulAman",--Remove restriction in classic wow but add load conditions to not load on live
+	-- ZG and ZA are now part of the party mods for Cataclysm
+--	"DBM-ZulAman",--Remove restriction in classic wow versions
+--	"DBM-ZG",--Remove restriction in classic wow versions
 	"DBM-SiegeOfOrgrimmar",--Block legacy version. New version is "DBM-SiegeOfOrgrimmarV2"
 	"DBM-HighMail",
 	"DBM-ProvingGrounds-MoP",--Renamed to DBM-ProvingGrounds in 6.0 version since blizzard updated content for WoD
 	"DBM-ProvingGrounds",--Renamed to DBM-Challenges going forward to include proving grounds and any new single player challendges of similar design such as mage tower artifact quests
 	"DBM-VPKiwiBeta",--Renamed to DBM-VPKiwi in final version.
 	"DBM-Suramar",--Renamed to DBM-Nighthold
-	"DBM-KulTiras",--Merged to DBM-Azeroth-BfA
-	"DBM-Zandalar",--Merged to DBM-Azeroth-BfA
+	"DBM-KulTiras",--Merged to DBM-BfA
+	"DBM-Zandalar",--Merged to DBM-BfA
+	"DBM-Azeroth",--Merged into DBM-Core events mod.
+	"DBM-Argus",--Merged into DBM-BrokenIsles mod
+	"DBM-GarrisonInvasions",--Merged into DBM-Draenor mod
+	"DBM-Azeroth-BfA",--renamed to DBM-BfA
+}
+
+--[InstanceID]={level,zoneType}
+--zoneType: 1 = outdoor, 2 = dungeon, 3 = raid
+local instanceDifficultyBylevel = {
+	--World
+	[0]={60,1},[1]={60, 1},--Eastern Kingdoms and Azeroth world bosses. These would be warfront and aniversery world bosses, so they'd be set to 50 for now. Likely 60 next year
+	[530]={70, 1},--Outlands World Bosses
+--	[870]={90, 1},[1064]={30, 1},--MoP World Bosses
+--	[1116]={100, 1},[1159]={40, 1},[1331]={40, 1},[1158]={40, 1},[1153]={40, 1},[1152]={40, 1},[1330]={40, 1},[1160]={40, 1},[1154]={40, 1},[1464]={40, 1},--Wod World and Garrison Bosses
+--	[1220]={110, 1},[1779]={45, 1},--Legion World bosses
+--	[1643]={120, 1},[1642]={50, 1},[1718]={50, 1},[1943]={50, 1},[1876]={50, 1},[2105]={50, 1},[2111]={50, 1},[2275]={50, 1},--Bfa World bosses and warfronts
+	--Raids
+	[509]={60, 3},[531]={60, 3},[469]={60, 3},[409]={60, 3},--Classic Raids
+	[564]={70, 3},[534]={70, 3},[532]={70, 3},[565]={70, 3},[544]={70, 3},[548]={70, 3},[580]={70, 3},[550]={70, 3},--BC Raids
+--	[615]={80, 3},[724]={80, 3},[649]={80, 3},[616]={80, 3},[631]={80, 3},[533]={80, 3},[249]={80, 3},[603]={80, 3},[624]={80, 3},--Wrath Raids
+--	[757]={85, 3},[671]={85, 3},[669]={85, 3},[967]={85, 3},[720]={85, 3},[951]={85, 3},[754]={85, 3},--Cata Raids
+--	[1009]={90, 3},[1008]={90, 3},[1136]={90, 3},[996]={90, 3},[1098]={90, 3},--MoP Raids
+--	[1205]={100},[1448]={100, 3},[1228]={100, 3},--WoD Raids (yes, only 3 kekw)
+--	[1712]={110, 3},[1520]={110, 3},[1530]={110, 3},[1676]={110, 3},[1648]={110, 3},--Legion Raids (Set to 50 because 45 tuning makes them difficult even at 50)
+--	[1861]={120, 3},[2070]={120, 3},[2096]={120, 3},[2164]={120, 3},[2217]={120, 3},--BfA Raids
+--	[2296]={60, 3},--Shadowlands Raids
+	--Dungeons
+	[48]={60, 2},[230]={60, 2},[429]={60, 2},[389]={60, 2},[34]={60, 2},--Classic Dungeons
+	[540]={70, 2},[558]={70, 2},[556]={70, 2},[555]={70, 2},[542]={70, 2},[546]={70, 2},[545]={70, 2},[547]={70, 2},[553]={70, 2},[554]={70, 2},[552]={70, 2},[557]={70, 2},[269]={70, 2},[560]={70, 2},[543]={70, 2},[585]={70, 2},--BC Dungeons
+--	[619]={80, 2},[601]={80, 2},[595]={80, 2},[600]={80, 2},[604]={80, 2},[602]={80, 2},[599]={80, 2},[576]={80, 2},[578]={80, 2},[574]={80, 2},[575]={80, 2},[608]={80, 2},[658]={80, 2},[632]={80, 2},[668]={80, 2},[650]={80, 2},--Wrath Dungeons
+--	[755]={85, 2},[645]={85, 2},[36]={85, 2},[670]={85, 2},[644]={85, 2},[33]={85, 2},[643]={85, 2},[725]={85, 2},[657]={85, 2},[309]={85, 2},[859]={85, 2},[568]={85, 2},[938]={85, 2},[940]={85, 2},[939]={85, 2},[646]={85, 2},--Cata Dungeons
+--	[960]={90, 2},[961]={90, 2},[959]={90, 2},[962]={90, 2},[994]={90, 2},[1011]={90, 2},[1007]={90, 2},[1001]={90, 2},[1004]={90, 2},--MoP Dungeons
+--	[1182]={100, 2},[1175]={100, 2},[1208]={100, 2},[1195]={100, 2},[1279]={100, 2},[1176]={100, 2},[1209]={100, 2},[1358]={100, 2},--WoD Dungeons
+--	[1501]={110, 2},[1466]={110, 2},[1456]={110, 2},[1477]={110, 2},[1458]={110, 2},[1516]={110, 2},[1571]={110, 2},[1492]={110, 2},[1544]={110, 2},[1493]={110, 2},[1651]={110, 2},[1677]={110, 2},[1753]={110, 2},--Legion Dungeons
+--	[1763]={120, 2},[1754]={120, 2},[1762]={120, 2},[1864]={120, 2},[1822]={120, 2},[1877]={120, 2},[1594]={120, 2},[1841]={120, 2},[1771]={120, 2},[1862]={120, 2},[2097]={120, 2},--Bfa Dungeons
+--	[2286]={60, 2},[2289]={60, 2},[2290]={60, 2},[2287]={60, 2},[2285]={60, 2},[2293]={60, 2},[2291]={60, 2},[2284]={60, 2}--Shadowlands Dungeons
 }
 
 
@@ -6469,9 +6507,16 @@ do
 	local autoLog = false
 	local autoTLog = false
 
-	function DBM:StartLogging(timer, checkFunc)
+	local function isCurrentContent()
+		if instanceDifficultyBylevel[LastInstanceMapID] and (instanceDifficultyBylevel[LastInstanceMapID][1] >= playerLevel) and (instanceDifficultyBylevel[LastInstanceMapID][2] == 3) or (difficultyIndex or 0) == 8 then--current player level raid or any M+ dungeon
+			return true
+		end
+		return false
+	end
+
+	function DBM:StartLogging(timer, checkFunc, force)
 		self:Unschedule(DBM.StopLogging)
-		if self.Options.LogOnlyNonTrivial and not IsInRaid() then return end
+		if not force and self.Options.LogOnlyNonTrivial and ((LastInstanceType ~= "raid" and difficultyIndex ~= 8) or not isCurrentContent()) then return end
 		if self.Options.AutologBosses then
 			if not LoggingCombat() then
 				autoLog = true
@@ -7741,10 +7786,19 @@ function bossModPrototype:IsScenario()
 	return false
 end
 
-function bossModPrototype:IsTrivial(level)
-	if difficultyIndex == 24 then return false end--Timewalker dungeon, ignore level and return false for trivial
-	if playerLevel >= level then
-		return true
+function DBM:IsTrivial(customLevel)
+	--if custom level passed, we always hard check that level for trivial vs non trivial
+	if customLevel then--Custom level parameter
+		if playerLevel >= customLevel then
+			return true
+		end
+	else
+		--First, auto bail and return non trivial if it's an instancce not in table to prevent nil error
+		if not instanceDifficultyBylevel[LastInstanceMapID] then return false end
+		--Content is trivial if player level is 10 higher than content involved
+		if playerLevel >= (instanceDifficultyBylevel[LastInstanceMapID][1]+10) then
+			return true
+		end
 	end
 	return false
 end
