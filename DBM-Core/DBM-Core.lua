@@ -461,7 +461,6 @@ local bannedMods = { -- a list of "banned" (meaning they are replaced by another
 	"DBM-Suramar",--Renamed to DBM-Nighthold
 	"DBM-KulTiras",--Merged to DBM-BfA
 	"DBM-Zandalar",--Merged to DBM-BfA
-	"DBM-Azeroth",--Merged into DBM-Core events mod.
 	"DBM-Argus",--Merged into DBM-BrokenIsles mod
 	"DBM-GarrisonInvasions",--Merged into DBM-Draenor mod
 	"DBM-Azeroth-BfA",--renamed to DBM-BfA
