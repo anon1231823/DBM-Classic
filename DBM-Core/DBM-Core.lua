@@ -7906,6 +7906,7 @@ bossModPrototype.GetCIDFromGUID = DBM.GetCIDFromGUID
 bossModPrototype.IsCreatureGUID = DBM.IsCreatureGUID
 bossModPrototype.GetUnitIdFromGUID = DBM.GetUnitIdFromGUID
 bossModPrototype.CheckNearby = DBM.CheckNearby
+bossModPrototype.IsTrivial = DBM.IsTrivial
 
 do
 	local bossTargetuIds = {
