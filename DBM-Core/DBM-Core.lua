@@ -8273,6 +8273,7 @@ do
 			["HasInterrupt"] = true,
 			["HasImmunity"] = true,
 			["RemoveCurse"] = true,
+			--["MagicDispeller"] = true,--Spellsteal in TBC
 		},
 		["PALADIN1"] = {	--Holy Paladin
 			["Healer"] = true,
@@ -8324,7 +8325,7 @@ do
 			["Melee"] = true,
 			["Physical"] = true,
 			["HasInterrupt"] = true,
-			["MagicDispeller"] = (IsSpellKnown(23922) or IsSpellKnown(23923) or IsSpellKnown(23924) or IsSpellKnown(23925)) and true or false,--Shield Slam
+			["MagicDispeller"] = (IsSpellKnown(23922) or IsSpellKnown(23923) or IsSpellKnown(23924) or IsSpellKnown(23925)),--Shield Slam
 		},
 		["DRUID1"] = {	--Balance Druid
 			["Healer"] = true,
@@ -8396,7 +8397,7 @@ do
 			["CasterDps"] = true,
 			["MagicDispeller"] = true,
 			["RemoveMagic"] = true,
-			["HasInterrupt"] = IsSpellKnown(15487) and true or false,--Silence is a talent tree talent
+			["HasInterrupt"] = IsSpellKnown(15487),--Silence is a talent tree talent
 		},
 		["ROGUE1"] = { --Assassination Rogue
 			["Dps"] = true,
